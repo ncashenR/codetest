@@ -1,0 +1,18 @@
+{
+    "options": {
+        "vk_action": {
+            "type": "NEWS",
+            "url": "https://www.vissel-kobe.co.jp/news/article/19586.html?scid=wi_vis_appvk_push_20220203&source=visselapp"
+        },
+        "aps": {
+            "sound": "1",
+            "alert": {
+                "title": "2/26(土)福岡戦観戦チケット🎟",
+                "body": "本日2/3(木)10時より一般販売スタート！⚽️"
+            },
+            "badge": 1
+        },
+        "os": "iOS",
+        "rid": "8tEnGR"
+    }
+}

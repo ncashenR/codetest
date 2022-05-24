@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Coding push notifications 📱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create a preview UI for push notifications using HTML and stylesheets 😉  
+You are free to implement it however you wish~  
+Have fun!
+## Preparation
+Run the following command to install the module
+```
+cd /ios-notice
 
-## Available Scripts
+npm install
+```
+## Application Execution
+```
+npm start
+```
+Only the iPhone frame should be visible  
+![iphone](public/img/iphone_body.png)
+By the way, the `image` is **wallpaper only** ( Everything else is `HTML` + `CSS` )
 
-In the project directory, you can run:
+## Already available frameworks
+* [React.js](https://reactjs.org/)
+* [MATERIAL-UI](https://v4.mui.com/) (v4.x)
+    * [Material Icons](https://v4.mui.com/components/material-icons/)
+* [Font Awesome](https://fontawesome.com/)
 
-### `npm start`
+## Source code
+Created with [React create app](https://create-react-app.dev/) + α
+```
+npx create-react-app 
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+📁 ios-notice
+├ 📁 public
+├ 📁 src
+│ ├ 📁 component
+│ │ └ AppPushPreview.jsx ← 📝 Edit this file
+│ ├ 📁 img
+│ ├ App.js
+│ ├ index.js
+ ...
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## STEP 1
+### Let's fetch json files for push data
+Edit `src/App.js` and assign the contents of the `json` file to React variables.
+You will also need to deal with the case where the value does not exist in the variable.
+* `/public/json/notice.json`
 
-### `npm test`
+## SETP 2
+### Receive values in the preview component
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Edit `src/component/AppPushPreview.jsx` to get values from `props`
+* title
+* body
+* name
 
-### `npm run build`
+`app icon` is not included in the json file and cannot be retrieved  
+Please use `visselIconSrc` since it has already been imported
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## STEP 3
+### Create `HTML` and `stylesheet` for notifications  
+Please refer to the images below~  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![iphone+notice](public/img/iphone_notice.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If the [Grow](https://v4.mui.com/components/transitions/#grow) transition component is used well, it looks more like a push notification.
 
-### `npm run eject`
+## STEP 4 ( If you have time to spare )
+The notification UI alone is lonely, so please make it more iPhone-like 😆
+* Time 
+* Radio Status
+* Battery level etc...
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+For time and day of the week, you can use [moment.js](https://momentjs.com/)  
+Also, you can use [Material Icons](https://v4.mui.com/components/material-icons/) and [Font Awesome](https://fontawesome.com/) for the icons.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![iphone+full](public/img/iphone_full.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
